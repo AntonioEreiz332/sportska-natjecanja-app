@@ -4,7 +4,7 @@ import UtakmicaItem from './UtakmicaItem';
 import UtakmicaForm from './UtakmicaForm';
 
 const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:3000';
-const API_URL = `${API_BASE}/api/tim`;
+const API_URL = `${API_BASE}/api/utakmica`;
 
 function UtakmicaList() {
   const [utakmice, setUtakmice] = useState([]);
@@ -157,3 +157,4 @@ function UtakmicaList() {
 }
 
 export default UtakmicaList;
+
