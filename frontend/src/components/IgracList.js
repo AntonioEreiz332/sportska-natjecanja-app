@@ -4,7 +4,7 @@ import IgracItem from './IgracItem';
 import IgracForm from './IgracForm';
 
 const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:3000';
-const API_URL = `${API_BASE}/api/tim`;
+const API_URL = `${API_BASE}/api/igrac`;
 
 function IgracList() {
   const [igraci, setIgraci] = useState([]);
@@ -168,3 +168,4 @@ function IgracList() {
 }
 
 export default IgracList;
+
