@@ -4,7 +4,7 @@ import LigaItem from './LigaItem';
 import LigaForm from './LigaForm';
 
 const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:3000';
-const API_URL = `${API_BASE}/api/tim`;
+const API_URL = `${API_BASE}/api/liga`;
 
 
 function LigaList() {
@@ -162,3 +162,4 @@ function LigaList() {
 }
 
 export default LigaList;
+
