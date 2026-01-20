@@ -1,0 +1,22 @@
+{
+  "name": "sportska-natjecanja-app",
+  "version": "1.0.0",
+  "description": "Graf sustav za praćenje sportskih natjecanja",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": ["neo4j", "express", "sportska-natjecanja"],
+  "author": "Tim B",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "neo4j-driver": "^5.15.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
