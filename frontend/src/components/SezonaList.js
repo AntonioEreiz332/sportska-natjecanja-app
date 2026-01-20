@@ -4,7 +4,7 @@ import SezonaItem from './SezonaItem';
 import SezonaForm from './SezonaForm';
 
 const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:3000';
-const API_URL = `${API_BASE}/api/tim`;
+const API_URL = `${API_BASE}/api/sezona`;
 
 function SezonaList() {
   const [sezone, setSezone] = useState([]);
@@ -156,3 +156,4 @@ function SezonaList() {
 }
 
 export default SezonaList;
+
