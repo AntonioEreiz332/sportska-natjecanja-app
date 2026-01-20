@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:3000';
-const API_URL = `${API_BASE}/api/igrac`;
+const IGRAC_API_URL = `${API_BASE}/api/igrac`;
+const TIM_API_URL = `${API_BASE}/api/tim`;
 
 
 function IgracForm({ igracZaUredjivanje, onSubmit, onCancel }) {
@@ -22,7 +23,7 @@ function IgracForm({ igracZaUredjivanje, onSubmit, onCancel }) {
     // Dohvati timove za dropdown
     const fetchTimovi = async () => {
       try {
-        const res = await axios.get(API_URL);
+        const res = await axios.get(TIM_API_URL);
         setTimovi(res.data.timovi || []);
       } catch (err) {
         console.error('Greška pri dohvaćanju timova:', err);
@@ -206,4 +207,5 @@ function IgracForm({ igracZaUredjivanje, onSubmit, onCancel }) {
 }
 
 export default IgracForm;
+
 
