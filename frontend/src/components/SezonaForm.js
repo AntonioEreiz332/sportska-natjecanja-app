@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:3000';
-const API_URL = `${API_BASE}/api/tim`;
+const SEZONA_API_URL = `${API_BASE}/api/sezona`;
+const LIGA_API_URL = `${API_BASE}/api/liga`;
 
 
 function SezonaForm({ sezonaZaUredjivanje, onSubmit, onCancel }) {
@@ -19,7 +20,7 @@ function SezonaForm({ sezonaZaUredjivanje, onSubmit, onCancel }) {
   useEffect(() => {
     const fetchLige = async () => {
       try {
-        const res = await axios.get(API_URL);
+        const res = await axios.get(LIGA_API_URL);
         setLige(res.data.lige || []);
       } catch (err) {
         console.error('Greška pri dohvaćanju liga:', err);
@@ -175,3 +176,4 @@ function SezonaForm({ sezonaZaUredjivanje, onSubmit, onCancel }) {
 }
 
 export default SezonaForm;
+
